@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build:
+      dockerfile: ./src/Dockerfile
+    image: app:v1
+    ports:
+      - 3500:3500
+    user: root
+    restart: always
+    deploy:
+        replicas: 1
